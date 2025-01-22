@@ -1,0 +1,7 @@
+datasets:
+  - name: ca_dfatd_sema_sanctions
+    title: ca_dfatd_sema_sanctions
+    path: /data/datasets/ca_dfatd_sema_sanctions/entities.ftm.json
+    # Incrementing the version will force a re-indexing of the data. It must be
+    # given as a monotonic increasing number.
+    version: "20220419001"
