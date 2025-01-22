@@ -32,6 +32,7 @@ services:
     ports:
       - "127.0.0.1:8000:8000"
     environment:
+      YENTE_MANIFEST: "manifests/custom.yml"
       YENTE_INDEX_TYPE: "elasticsearch"
       YENTE_INDEX_URL: http://index:9200
       # Set this to a randomly generated string to enable the /updatez API:
