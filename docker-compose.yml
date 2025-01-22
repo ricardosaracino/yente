@@ -32,7 +32,7 @@ services:
     ports:
       - "127.0.0.1:8000:8000"
     environment:
-      YENTE_MANIFEST: "manifests/custom.yml"
+      YENTE_MANIFEST: "/data/manifests/custom.yml"
       YENTE_INDEX_TYPE: "elasticsearch"
       YENTE_INDEX_URL: http://index:9200
       # Set this to a randomly generated string to enable the /updatez API:
@@ -41,7 +41,7 @@ services:
     # create a volume mount here to make that data accessible from the 
     # container:
     volumes:
-       - "/:/data"
+       - "/data:/data"
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8000/healthz" ]
       interval: 30s
